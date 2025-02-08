@@ -1,5 +1,5 @@
 
-![Logo](add logo link)
+![Logo](https://github.com/Immortal-Hollow/MatchSerious/blob/main/ReadmeAssets/GameLogo.png)
 
 # Match Memory
 
