@@ -1,0 +1,31 @@
+# User-specific files
+UserSettings/
+
+# Unity generated folders
+Library/
+Temp/
+Obj/
+Build/
+BuildSettings/
+
+# User-specific files
+.vs/
+.idea/
+.vscode/
+
+# Unity Asset Store
+.assetstore/
+
+# Logs
+*.log
+
+# Windows-specific files
+Thumbs.db
+Desktop.ini
+
+# macOS-specific files
+.DS_Store
+
+# Unity cache files
+*.apk
+*.unitypackage
