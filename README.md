@@ -24,10 +24,6 @@ The goal of this 2d mobile video game is to demonstrate how a large game develop
 </div>
 
 
-## 📜 Documentation
-
-[Documentation](https://linktodocumentation)
-
 ## FAQ
 
 #### What is the main purpose of this project?
