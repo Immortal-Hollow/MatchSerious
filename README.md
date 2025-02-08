@@ -45,7 +45,7 @@ The goal of this 2d mobile video game is to demonstrate how a large game develop
 
 #### What are the system requirements?
 
-•	At least 1GB of RAM, quad-core processors or higher, and screen resolutions of 720p and above with an aspect ratio of 9:16.
+•	At least 512 of RAM, quad-core processors or higher, and screen resolutions of 720p and above with an aspect ratio of 9:16.
 
 •	iOS: Supports version 6.0 and above.
 
