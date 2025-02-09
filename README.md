@@ -1,7 +1,7 @@
 
 ![Logo](https://github.com/Immortal-Hollow/MatchSerious/blob/main/ReadmeAssets/GameLogo.png)
 
-# Match Memory
+# Match Serious
 
 The goal of this 2d mobile video game is to demonstrate how a large game development studio is addressing employees fatigue by creating an employee Fatigue Monitoring Game. This game was created to monitor and measure employee fatigue levels by putting them through a series of mental tasks such as response time challenges, memory tests, focus and attention tests, and decision-making situations. These exercises measure important variables such as attention and reaction time, helping in detecting signs of Fatigue.
 
