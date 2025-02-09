@@ -1568,21 +1568,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1629705044}
-        m_TargetAssemblyTypeName: OpenLinkButton, Assembly-CSharp
-        m_MethodName: OpenLink
+        m_TargetAssemblyTypeName: LinkOpener, Assembly-CSharp
+        m_MethodName: OpenURL
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1639,9 +1627,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1629705039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8828afd0aa59af444bc04ab402a50d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 86ec1df985978de44a0d5097fa6f2050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  url: https://github.com/Immortal-Hollow/MatchSerious
 --- !u!1 &1822823503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1688,6 @@ GameObject:
   - component: {fileID: 2105624199}
   - component: {fileID: 2105624198}
   - component: {fileID: 2105624201}
-  - component: {fileID: 2105624202}
   m_Layer: 5
   m_Name: SurveyBtn
   m_TagString: Untagged
@@ -1770,18 +1758,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2105624201}
         m_TargetAssemblyTypeName: OpenLinkBtn, Assembly-CSharp
         m_MethodName: OpenURL
@@ -1845,18 +1821,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   url: https://docs.google.com/forms/d/e/1FAIpQLScefyFLOZfwQigNcNOS4SKgJkKW7B02cx6eQ_daCeupLDfo3g/viewform
---- !u!114 &2105624202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105624196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bab1ff12e44a4343bda14b5dcecf95f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3989201645335960318
 PrefabInstance:
   m_ObjectHideFlags: 0
