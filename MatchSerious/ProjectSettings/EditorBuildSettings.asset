@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SelectGamemode.unity
     guid: c251f241b1aa5ff4982cad20da54ce98
+  - enabled: 1
+    path: Assets/Scenes/MemoryTest.unity
+    guid: 45208136e73c99548a59f86d36577ff7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
