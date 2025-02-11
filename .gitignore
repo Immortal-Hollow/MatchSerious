@@ -29,3 +29,11 @@ Desktop.ini
 # Unity cache files
 *.apk
 *.unitypackage
+
+# Firebase-specific ignores
+Assets/Firebase/
+Assets/Plugins/Firebase/
+Firebase/
+google-services.json
+GoogleService-Info.plist
+Firebase.Editor.dll
