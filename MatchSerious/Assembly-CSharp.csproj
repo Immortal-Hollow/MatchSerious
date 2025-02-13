@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\MemoryTest\MinigamesBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\General\VolumeControl.cs" />
+    <Compile Include="Assets\Scripts\General\DatabaseManager.cs" />
     <Compile Include="Assets\Scripts\MemoryTest\MemoryGameManagerUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
