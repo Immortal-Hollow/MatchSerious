@@ -21,5 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MemoryTest.unity
     guid: 45208136e73c99548a59f86d36577ff7
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 308cff91d6ac63b4098f1b7fc7f28dbf, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: b62fc576159ef2b41b6a5e38cdd3ea9b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
