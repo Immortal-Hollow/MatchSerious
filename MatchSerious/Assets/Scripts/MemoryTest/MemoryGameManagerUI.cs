@@ -198,3 +198,16 @@ public class MemoryGameManagerUI : MinigamesBase
         cardSingleUIList.Clear();
     }
 }
+public class User
+{
+    public string UserName { get; set; }
+    public float CompletionTime { get; set; }
+    public float FatigueScore { get; set; }
+
+    public User(string userName, float completionTime, float fatigueScore)
+    {
+        UserName = userName;
+        CompletionTime = completionTime;
+        FatigueScore = fatigueScore;
+    }
+}
