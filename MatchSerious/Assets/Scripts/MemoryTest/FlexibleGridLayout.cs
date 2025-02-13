@@ -5,108 +5,132 @@ using UnityEngine.UI;
 
 public class FlexibleGridLayout : LayoutGroup
 {
-    // Enum to define different types of layout fitting options
+    // Enum to define different layout fitting types
     public enum FitType
     {
-        Uniform,      // Both rows and columns are adjusted to fit equally
-        Width,        // Fit based on the width of the container
-        Height,       // Fit based on the height of the container
-        FixedRows,    // Keep a fixed number of rows, and calculate columns accordingly
-        FixedColumns  // Keep a fixed number of columns, and calculate rows accordingly
+        Uniform,      // Both rows and columns have equal sizing
+        Width,        // Fit based on the width of the parent
+        Height,       // Fit based on the height of the parent
+        FixedRows,    // Fixed number of rows
+        FixedColumns  // Fixed number of columns
     }
 
-    // Public fields to control the grid layout behavior
-    public FitType fitType;         // Type of fitting strategy
-    public int rows;                // Number of rows in the grid
-    public int columns;             // Number of columns in the grid
-    public Vector2 cellSize;        // Size of each individual cell in the grid
-    public Vector2 spacing;         // Spacing between the cells in the grid
+    public FitType fitType;           // Determines the fitting type for the layout
+    public int rows;                  // Number of rows in the grid layout
+    public int columns;               // Number of columns in the grid layout
+    public Vector2 cellSize;          // Size of each grid cell
+    public Vector2 spacing;           // Spacing between the cells
 
-    // Flags to control whether the layout will fit horizontally or vertically
-    public bool fitX;
-    public bool fitY;
+    public bool fitX;                 // Boolean to control horizontal fit
+    public bool fitY;                 // Boolean to control vertical fit
 
-    // Calculate layout input for the horizontal axis (width)
+    // Override the method to calculate horizontal layout input
     public override void CalculateLayoutInputHorizontal()
     {
         base.CalculateLayoutInputHorizontal();
 
-        // Handle the case where fitType is Width, Height or Uniform
+        // If the fit type is Width, Height, or Uniform, adjust both X and Y fit options
         if (fitType == FitType.Width || fitType == FitType.Height || fitType == FitType.Uniform)
         {
             fitX = true;
             fitY = true;
 
-            // Calculate square root of child count to adjust rows and columns based on available space
+            // Calculate square root of child count to set rows and columns to a square grid
             float sqrRt = Mathf.Sqrt(transform.childCount);
-            rows = Mathf.CeilToInt(sqrRt);
-            columns = Mathf.CeilToInt(sqrRt);
+            rows = Mathf.CeilToInt(sqrRt);   // Round up the number of rows
+            columns = Mathf.CeilToInt(sqrRt); // Round up the number of columns
         }
 
-        // Handle fixed column or width fitting
+        // Adjust rows if fitting by width or setting fixed columns
         if (fitType == FitType.Width || fitType == FitType.FixedColumns)
         {
-            // Calculate the number of rows based on the total child count and the number of columns
             rows = Mathf.CeilToInt(transform.childCount / (float)columns);
         }
 
-        // Handle fixed row or height fitting
+        // Adjust columns if fitting by height or setting fixed rows
         if (fitType == FitType.Height || fitType == FitType.FixedRows)
         {
-            // Calculate the number of columns based on the total child count and the number of rows
             columns = Mathf.CeilToInt(transform.childCount / (float)rows);
         }
 
-        // Dynamically get the width and height of the parent container
+        // Get the parent container's width and height
         float parentWidth = rectTransform.rect.width;
         float parentHeight = rectTransform.rect.height;
 
-        // Calculate the width and height of each cell, taking into account the number of rows and columns
-        float cellWidth = (parentWidth / columns) - spacing.x * (columns - 1) - (padding.left + padding.right) / columns;
-        float cellHeight = (parentHeight / rows) - spacing.y * (rows - 1) - (padding.top + padding.bottom) / rows;
+        // Calculate the width and height for each cell
+        float cellWidth = (parentWidth / (float)columns) - ((spacing.x / (float)columns) * 2) - (padding.left / (float)columns) - (padding.right / (float)columns);
+        float cellHeight = (parentHeight / (float)rows) - ((spacing.y / (float)rows) * 2) - (padding.top / (float)rows) - (padding.bottom / (float)rows);
 
-        // If fitX or fitY are enabled, adjust the cell size accordingly
+        // If the X or Y fit option is enabled, adjust the cell size accordingly
         cellSize.x = fitX ? cellWidth : cellSize.x;
         cellSize.y = fitY ? cellHeight : cellSize.y;
 
-        // Position each child element in the grid based on calculated positions
+        // Variables to track the current row and column during layout
         int columnCount = 0;
         int rowCount = 0;
 
-        // Loop through all the child elements and calculate their position and size
+        // Loop through all child elements and position them based on grid layout
         for (int i = 0; i < rectChildren.Count; i++)
         {
-            // Calculate row and column based on child index
-            rowCount = i / columns;
-            columnCount = i % columns;
+            rowCount = i / columns; // Calculate the current row
+            columnCount = i % columns; // Calculate the current column
 
-            var item = rectChildren[i];
+            var item = rectChildren[i]; // Get the current UI element
 
-            // Calculate the X and Y position for each child item
+            // Calculate the X and Y position based on row and column
             var xPos = (cellSize.x * columnCount) + (spacing.x * columnCount) + padding.left;
             var yPos = (cellSize.y * rowCount) + (spacing.y * rowCount) + padding.top;
 
-            // Set the position and size for each child element
-            SetChildAlongAxis(item, 0, xPos, cellSize.x); // Positioning child in horizontal axis (X)
-            SetChildAlongAxis(item, 1, yPos, cellSize.y); // Positioning child in vertical axis (Y)
+            // Set the position of the child element along the X and Y axes
+            SetChildAlongAxis(item, 0, xPos, cellSize.x);  // Set X position
+            SetChildAlongAxis(item, 1, yPos, cellSize.y);  // Set Y position
         }
     }
 
-    // Calculate layout input for the vertical axis (height)
+    // Helper method to return an anchor position based on the TextAnchor enum
+    private Vector2 GetAnchor(TextAnchor alignment)
+    {
+        // Switch statement to return appropriate anchor position for each TextAnchor value
+        switch (alignment)
+        {
+            case TextAnchor.UpperLeft:
+                return new Vector2(0, 1);
+            case TextAnchor.UpperCenter:
+                return new Vector2(0.5f, 1);
+            case TextAnchor.UpperRight:
+                return new Vector2(1, 1);
+            case TextAnchor.MiddleLeft:
+                return new Vector2(0, 0.5f);
+            case TextAnchor.MiddleCenter:
+                return new Vector2(0.5f, 0.5f);
+            case TextAnchor.MiddleRight:
+                return new Vector2(1, 0.5f);
+            case TextAnchor.LowerLeft:
+                return new Vector2(0, 0);
+            case TextAnchor.LowerCenter:
+                return new Vector2(0.5f, 0);
+            case TextAnchor.LowerRight:
+                return new Vector2(1, 0);
+            default:
+                return new Vector2(0.5f, 0.5f);  // Default center alignment
+        }
+    }
+
+    // Override the method for vertical layout calculation (not used here but required by LayoutGroup)
     public override void CalculateLayoutInputVertical()
     {
-        // This method is not used in this layout, so it's empty.
+        // No custom implementation for vertical layout calculation in this case
     }
 
-    // Custom method for setting the horizontal layout (not implemented in this case)
+    // Override the method to set horizontal layout (empty for now)
     public override void SetLayoutHorizontal()
     {
-        // Custom horizontal layout logic can go here if needed.
+        // No custom implementation for horizontal layout in this case
     }
 
-    // Custom method for setting the vertical layout (not implemented in this case)
+    // Override the method to set vertical layout (empty for now)
     public override void SetLayoutVertical()
     {
-        // Custom vertical layout logic can go here if needed.
+        // No custom implementation for vertical layout in this case
     }
 }

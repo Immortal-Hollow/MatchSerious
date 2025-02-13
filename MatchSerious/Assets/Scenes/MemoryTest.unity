@@ -242,8 +242,7 @@ GameObject:
   - component: {fileID: 162772917}
   - component: {fileID: 162772916}
   - component: {fileID: 162772915}
-  - component: {fileID: 162772914}
-  - component: {fileID: 162772913}
+  - component: {fileID: 162772918}
   m_Layer: 5
   m_Name: TryAgainBtn
   m_TagString: Untagged
@@ -270,30 +269,6 @@ RectTransform:
   m_AnchoredPosition: {x: -253, y: 3.7}
   m_SizeDelta: {x: 314, y: 35.3769}
   m_Pivot: {x: 0.5, y: 0.60722655}
---- !u!114 &162772913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162772911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2841d841f00fb374fbb3977c8ec35edc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &162772914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162772911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e32fcad9454fd344aae9ec990e29d2c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &162772915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +313,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 162772914}
+      - m_Target: {fileID: 162772918}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -348,18 +323,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: MemoryTest
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1991432340}
-        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &162772916
@@ -400,6 +363,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162772911}
   m_CullTransparentMesh: 1
+--- !u!114 &162772918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162772911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944a3600e1f435644b4fb903ab33ee3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &277579268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,7 +1111,6 @@ GameObject:
   - component: {fileID: 743925193}
   - component: {fileID: 743925192}
   - component: {fileID: 743925191}
-  - component: {fileID: 743925194}
   - component: {fileID: 743925195}
   m_Layer: 5
   m_Name: Normal Button
@@ -1207,19 +1181,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 743925192}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1991432340}
-        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &743925192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1258,18 +1220,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743925189}
   m_CullTransparentMesh: 1
---- !u!114 &743925194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743925189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce845fcfd6e20d14981b362f584e5bba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &743925195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,7 +1235,7 @@ MonoBehaviour:
   objectToAnimate: {fileID: 0}
   animationType: 1
   easeType: 35
-  duration: 0.2
+  duration: 0
   delay: 0
   loop: 0
   pingpong: 0
@@ -1303,9 +1253,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 952881544}
-  - component: {fileID: 952881546}
-  - component: {fileID: 952881545}
-  - component: {fileID: 952881547}
   - component: {fileID: 952881549}
   - component: {fileID: 952881552}
   - component: {fileID: 952881551}
@@ -1326,52 +1273,16 @@ RectTransform:
   m_GameObject: {fileID: 952881543}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85994, y: 0.85994, z: 0.85994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1069634968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00089836, y: -19.7484}
-  m_SizeDelta: {x: 579.65, y: 726.7251}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 512, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &952881545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952881543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ce768cea49a91c48a3204e8ff12d944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &952881546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952881543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244a3b73d612f9e4eb19cb10f00c823c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &952881547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952881543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98b5ece47ce1e254bbbdfb4c6142e938, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &952881549
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1397,14 +1308,14 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   fitType: 0
   rows: 0
   columns: 0
-  cellSize: {x: 0, y: 0}
+  cellSize: {x: 316.5051, y: 1060}
   spacing: {x: 0, y: 0}
-  fitX: 0
-  fitY: 0
+  fitX: 1
+  fitY: 1
 --- !u!114 &952881551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,10 +1328,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599c23324f000e44d9e65cf5214935bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardList: []
+  cardList:
+  - cardName: Pie
+    cardImage: {fileID: 21300000, guid: 75d794440be1c5f469761fa741fad9c6, type: 3}
+  - cardName: Baguette
+    cardImage: {fileID: 21300000, guid: 48d65bd3a0de3cb439cfc0d0abeb8213, type: 3}
+  - cardName: Bread
+    cardImage: {fileID: 21300000, guid: 8f0c59cd081057442ac191800a763af4, type: 3}
+  - cardName: Bun
+    cardImage: {fileID: 21300000, guid: ec5fe5c273c259043a714b3bb4ee501f, type: 3}
+  - cardName: Becon
+    cardImage: {fileID: 21300000, guid: cca71ca0da0963f468f7935a08647577, type: 3}
+  - cardName: Burger
+    cardImage: {fileID: 21300000, guid: aaa5f6768501b21408903fb79542e3c9, type: 3}
+  - cardName: Burrito
+    cardImage: {fileID: 21300000, guid: 56df5f5597796b446a54ef2395a0f0c9, type: 3}
+  - cardName: Bagel
+    cardImage: {fileID: 21300000, guid: 48d65bd3a0de3cb439cfc0d0abeb8213, type: 3}
+  - cardName: Chessecake
+    cardImage: {fileID: 21300000, guid: 3d41debfac3cc7a4a843538cd377ccba, type: 3}
+  - cardName: Cheesepuff
+    cardImage: {fileID: 21300000, guid: bb618122ff93a41498f81ccc190ed0b3, type: 3}
+  - cardName: Chocolate
+    cardImage: {fileID: 21300000, guid: 7595cf8db4340e841a574bdb6a8cc566, type: 3}
+  - cardName: Cookies
+    cardImage: {fileID: 21300000, guid: d84b846bfae8e0643bbe9ea20010c8f6, type: 3}
   cardListToSort: []
-  cardContainer: {fileID: 0}
-  cardPrefab: {fileID: 0}
+  cardContainer: {fileID: 952881544}
+  cardPrefab: {fileID: 3854333356663642689, guid: 82acf0fd6869c99489ddc85c018d158e, type: 3}
 --- !u!114 &952881552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,8 +1370,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSingleUIList: []
   selectedCardList: []
-  cardIdle: {fileID: 0}
-  cardActive: {fileID: 0}
+  cardIdle: {fileID: -8622259438476403829, guid: 505b47390b426f64a858c0527e797af7, type: 3}
+  cardActive: {fileID: -4630562183247585374, guid: d6b4bb4b832ba864f821aeb1c303a714, type: 3}
 --- !u!1 &1069634967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,13 +1425,13 @@ MonoBehaviour:
   gameArea: {fileID: 952881543}
   negativeButton: {fileID: 0}
   positiveButton: {fileID: 0}
-  cardGroup: {fileID: 0}
+  cardGroup: {fileID: 952881552}
   cardSingleUIList: []
   completionTimeText: {fileID: 717649757}
   bestTimeText: {fileID: 582567539}
   fatigueScoreText: {fileID: 1971598245}
-  totalFatigueText: {fileID: 1971598245}
-  backButton: {fileID: 162772915}
+  totalFatigueText: {fileID: 3661722115922977694, guid: bf7b0951df99663418f4f0072678a2ab, type: 3}
+  backButton: {fileID: 1566628637}
   audioSource: {fileID: 0}
   victorySound: {fileID: 8300000, guid: c04a79e548cdb2e4e8626f1e7dba8138, type: 3}
 --- !u!1 &1138591630
@@ -1508,7 +1443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1138591632}
-  - component: {fileID: 1138591631}
+  - component: {fileID: 1138591633}
   m_Layer: 0
   m_Name: DatabaseManager
   m_TagString: Untagged
@@ -1516,18 +1451,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1138591631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138591630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75ed1d6844e1c7d4e845e1f3dccb1ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1138591632
 Transform:
   m_ObjectHideFlags: 0
@@ -1543,6 +1466,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138591633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138591630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74fa7b07e3cc9549aed2f690179e825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Score: {fileID: 3661722115922977694, guid: bf7b0951df99663418f4f0072678a2ab, type: 3}
 --- !u!1 &1462132089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,7 +1492,6 @@ GameObject:
   - component: {fileID: 1462132093}
   - component: {fileID: 1462132092}
   - component: {fileID: 1462132091}
-  - component: {fileID: 1462132094}
   - component: {fileID: 1462132095}
   m_Layer: 5
   m_Name: Easy Button
@@ -1626,19 +1562,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1462132092}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1991432340}
-        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1462132092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1677,18 +1601,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462132089}
   m_CullTransparentMesh: 1
---- !u!114 &1462132094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462132089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce845fcfd6e20d14981b362f584e5bba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1462132095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,7 +1616,7 @@ MonoBehaviour:
   objectToAnimate: {fileID: 0}
   animationType: 1
   easeType: 35
-  duration: 0.2
+  duration: 0
   delay: 0
   loop: 0
   pingpong: 0
@@ -1976,7 +1888,6 @@ GameObject:
   - component: {fileID: 1566628639}
   - component: {fileID: 1566628638}
   - component: {fileID: 1566628637}
-  - component: {fileID: 1566628636}
   - component: {fileID: 1566628640}
   m_Layer: 5
   m_Name: ExitBtn
@@ -2009,18 +1920,6 @@ RectTransform:
   m_AnchoredPosition: {x: 149, y: -150}
   m_SizeDelta: {x: 160, y: 35.4941}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1566628636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566628634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cd8849d4c9b42e45b03300267bb45d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1566628637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2065,21 +1964,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1566628636}
+      - m_Target: {fileID: 1566628640}
         m_TargetAssemblyTypeName: MemoryGameManagerUI, Assembly-CSharp
         m_MethodName: BackToMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1991432340}
-        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
-        m_MethodName: PlayButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2136,9 +2023,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1566628634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2841d841f00fb374fbb3977c8ec35edc, type: 3}
+  m_Script: {fileID: 11500000, guid: 201fd16b8441ff74781715feb8833817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameArea: {fileID: 0}
+  negativeButton: {fileID: 0}
+  positiveButton: {fileID: 0}
+  cardGroup: {fileID: 0}
+  cardSingleUIList: []
+  completionTimeText: {fileID: 0}
+  bestTimeText: {fileID: 0}
+  fatigueScoreText: {fileID: 0}
+  totalFatigueText: {fileID: 0}
+  backButton: {fileID: 0}
+  audioSource: {fileID: 0}
+  victorySound: {fileID: 0}
 --- !u!1 &1575191255
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,7 +2047,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1575191256}
-  - component: {fileID: 1575191257}
   - component: {fileID: 1575191258}
   m_Layer: 5
   m_Name: Difficulty Manager
@@ -2177,18 +2075,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1575191257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575191255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6069b814ad71554f94fd72a8f314a25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1575191258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2201,7 +2087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9601a81a8530d4daebb990fcd3430a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficultySelector: {fileID: 1575191255}
+  difficultySelector: {fileID: 1498876888}
   closeMinigameButton: {fileID: 1470023795}
   easyButton: {fileID: 1462132091}
   normalButton: {fileID: 743925191}
@@ -2388,7 +2274,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1991432342}
   - component: {fileID: 1991432341}
-  - component: {fileID: 1991432340}
   m_Layer: 0
   m_Name: WinSoundManager
   m_TagString: Untagged
@@ -2396,18 +2281,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1991432340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991432339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2841d841f00fb374fbb3977c8ec35edc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1991432341
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2532,8 +2405,6 @@ GameObject:
   - component: {fileID: 2105624200}
   - component: {fileID: 2105624199}
   - component: {fileID: 2105624198}
-  - component: {fileID: 2105624201}
-  - component: {fileID: 2105624202}
   - component: {fileID: 2105624203}
   m_Layer: 5
   m_Name: Hard Button
@@ -2604,19 +2475,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2105624199}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1991432340}
-        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
-        m_MethodName: PlayButtonSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2105624199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2655,30 +2514,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105624196}
   m_CullTransparentMesh: 1
---- !u!114 &2105624201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105624196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce845fcfd6e20d14981b362f584e5bba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2105624202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105624196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2841d841f00fb374fbb3977c8ec35edc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2105624203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2694,7 +2529,7 @@ MonoBehaviour:
   objectToAnimate: {fileID: 0}
   animationType: 1
   easeType: 35
-  duration: 0.2
+  duration: 0
   delay: 0
   loop: 0
   pingpong: 0
