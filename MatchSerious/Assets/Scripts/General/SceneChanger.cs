@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; // Imports the SceneManager library to handle scene transitions
-
+using UnityEngine.UI;
 public class SceneChanger : MonoBehaviour
 {
     // This method is called to change to the selected scene

@@ -1976,6 +1976,7 @@ GameObject:
   - component: {fileID: 1566628638}
   - component: {fileID: 1566628637}
   - component: {fileID: 1566628640}
+  - component: {fileID: 1566628641}
   m_Layer: 5
   m_Name: ExitBtn
   m_TagString: Untagged
@@ -2063,6 +2064,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1566628641}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MemoryTest
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1566628638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2125,6 +2138,18 @@ MonoBehaviour:
   backButton: {fileID: 0}
   audioSource: {fileID: 0}
   victorySound: {fileID: 0}
+--- !u!114 &1566628641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566628634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944a3600e1f435644b4fb903ab33ee3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1575191255
 GameObject:
   m_ObjectHideFlags: 0
