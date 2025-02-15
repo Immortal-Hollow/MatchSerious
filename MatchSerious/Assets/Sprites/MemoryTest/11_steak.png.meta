@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 56df5f5597796b446a54ef2395a0f0c9
+guid: c44b5562425d31b45a72104a759cd8ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2746619368070703002
-    second: 18_burrito_0
+      213: 3110647849335303641
+    second: 11_Steak_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 18_burrito_0
+      name: 11_Steak_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 215
-        width: 997
-        height: 637
+        x: 39
+        y: 132
+        width: 992
+        height: 807
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66810f8ac3c02e9d0800000000000000
-      internalID: -2746619368070703002
+      spriteID: 9dda6f0fcbd3b2b20800000000000000
+      internalID: 3110647849335303641
       vertices: []
       indices: 
       edges: []
@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      11_Steak_0: 3110647849335303641
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
