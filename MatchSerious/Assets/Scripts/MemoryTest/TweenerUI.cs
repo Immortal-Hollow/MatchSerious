@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using static UnityEditor.MaterialProperty;
 
 // Enum defining possible animation types
 public enum UIAnimationType
