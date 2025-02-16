@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "306496008784",
+    "firebase_url": "https://matchserious-c58ef-default-rtdb.firebaseio.com",
+    "project_id": "matchserious-c58ef",
+    "storage_bucket": "matchserious-c58ef.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306496008784:android:37963ca5b438dbbbc61755",
+        "android_client_info": {
+          "package_name": "com.immortalhollow.matchserious"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306496008784-0kivjbcj74soht62af4eprh137a4qigq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.immortalhollow.matchserious",
+            "certificate_hash": "1f1b868c80851a6de68a17997d3eb4f545e2aa79"
+          }
+        },
+        {
+          "client_id": "306496008784-9o08buci6joh6j026o9p6vbddr0653un.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEEOMpzKBZTtRdw_Zh9sitpJrDJpXtuHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306496008784-9o08buci6joh6j026o9p6vbddr0653un.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
