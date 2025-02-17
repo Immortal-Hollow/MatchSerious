@@ -73,7 +73,7 @@ The goal of this 2d mobile video game is to demonstrate how a large game develop
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40" alt="instagram logo"  />
   </a>
     <a href="https://www.tiktok.com/@immortalhollow?_t=ZN-8tyaGKbtsfu&_r=1" target="_blank">
-    <img src="https://github.com/Immortal-Hollow/MatchSerious/blob/main/ReadmeAssets/tiktok-logo.png" width="50" height="50" alt="instagram logo"  />
+    <img src="https://github.com/Immortal-Hollow/MatchSerious/blob/main/ReadmeAssets/tiktoklogo.png" width="40" height="40" alt="tiktok logo"  />
   </a>
 </div>
 
