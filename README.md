@@ -14,7 +14,7 @@ The goal of this 2d mobile video game is to demonstrate how a large game develop
   <img src="https://github.com/Immortal-Hollow/MatchSerious/blob/main/ReadmeAssets/Screenshot_2.jpg" width="100" /> 
   <img src="https://github.com/Immortal-Hollow/MatchSerious/blob/main/ReadmeAssets/Screenshot_3.jpg" width="100" />
   <img src="https://github.com/Immortal-Hollow/MatchSerious/blob/main/ReadmeAssets/Screenshot_4s.jpg" width="100" />
-  <img src="https://github.com/Immortal-Hollow/MatchSerious/blob/main/ReadmeAssets/Screenshot_5.jpg" />
+  <img src="https://github.com/Immortal-Hollow/MatchSerious/blob/main/ReadmeAssets/Screenshot_5.jpg" width="100" />
 </p>
 
 
