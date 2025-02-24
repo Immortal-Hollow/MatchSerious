@@ -6,7 +6,7 @@
 The goal of this 2d mobile video game is to demonstrate how a large game development studio is addressing employees fatigue by creating an employee Fatigue Monitoring Game. This game was created to monitor and measure employee fatigue levels by putting them through a series of mental tasks such as response time challenges, memory tests, focus and attention tests, and decision-making situations. These exercises measure important variables such as attention and reaction time, helping in detecting signs of Fatigue.
 
 
-## Screenshots
+## 📱 Screenshots
 
 
 <p float="left">
@@ -27,7 +27,7 @@ The goal of this 2d mobile video game is to demonstrate how a large game develop
 </div>
 
 
-## FAQ
+## 🧐 FAQ
 
 #### What is the main purpose of this project?
 
@@ -81,7 +81,7 @@ The goal of this 2d mobile video game is to demonstrate how a large game develop
 
 
 ###
-## Authors
+## ✨ Authors
 
 - [@billidev200](https://github.com/billidev200)
 - [@thanoss26](https://github.com/thanoss26)
