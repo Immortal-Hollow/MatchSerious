@@ -62,6 +62,21 @@ The goal of this 2d mobile video game is to demonstrate how a large game develop
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="40" alt="firebase logo" />
 </div>
 
+## 💻 Required packages for running the project in unity
+
+Dotween
+```bash
+https://assetstore.unity.com/packages/p/dotween-hotween-v2-27676
+```
+Unity Authentication Package
+```bash
+  Version 3.4.0
+```
+Firebase Unity SDK | FirebaseDatabase.unitypackage
+```bash
+   https://firebase.google.com/download/unity
+```
+
 ## 🔗 Links
 
 <div align="left">
