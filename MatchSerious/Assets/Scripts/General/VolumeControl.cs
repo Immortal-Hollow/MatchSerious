@@ -1,42 +1,30 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Diagnostics.DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
 public class VolumeControl : MonoBehaviour
 {
-    public Slider volumeSlider; // Reference to the UI Slider for controlling volume
-    private float lastVolume = 1.0f; // Variable to store the volume level before muting
+    public Slider volumeSlider; // Slider for background music volume
+    private float lastVolume = 1.0f;
 
     private void Start()
     {
-        // Check if volumeSlider is assigned in the Inspector
         if (volumeSlider != null)
         {
-            // Set the slider's value to match the current music volume
-            volumeSlider.value = BackgroundMusic.instance.audioSource.volume;
-
-            // Add a listener to the slider to call OnVolumeChanged when the slider value changes
-            volumeSlider.onValueChanged.AddListener(OnVolumeChanged);
+            // Set initial slider value to the current music volume
+            volumeSlider.value = BackgroundMusic.instance.GetMusicVolume();
+            volumeSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
         }
         else
         {
-            Debug.LogError("Volume slider is not assigned."); // Log error if slider is missing
+            Debug.LogError("Volume slider is not assigned.");
         }
     }
 
-    // This method is called when the volume slider value changes
-    private void OnVolumeChanged(float volume)
+    // Called when the music volume slider changes
+    private void OnMusicVolumeChanged(float volume)
     {
-        Debug.Log("Volume changed: " + volume); // Log the new volume value for debugging
-
-        // Set the volume in the BackgroundMusic script
+        // Update only the background music volume
         BackgroundMusic.instance.SetMusicVolume(volume);
         lastVolume = volume;
-    }
-
-    // For debugging purposes: Returns a string that represents this class in the debugger
-    private string GetDebuggerDisplay()
-    {
-        return ToString(); // Return a string representation of the current state
     }
 }
