@@ -23,7 +23,6 @@ The goal of this 2d mobile video game is to demonstrate how a large game develop
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg" height="40" alt="android logo"/>
   <img width="12" />
-  <img src="https://cdn.simpleicons.org/apple/000000" height="40" alt="apple logo"  />
 </div>
 
 
