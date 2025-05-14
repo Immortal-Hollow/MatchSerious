@@ -9,7 +9,7 @@ public abstract class MinigamesBase : MonoBehaviour
     [Header("Minigame base")]
     [SerializeField] protected GameObject gameArea;  // Game Area UI element (the area where the minigame takes place)
 
-    // Buttons for player interaction (e.g., to confirm or cancel actions)
+    // Buttons for player interaction 
     [SerializeField] private Button negativeButton;  // Button for negative/exit action
     [SerializeField] private Button positiveButton;  // Button for positive/accept action
 
@@ -31,7 +31,7 @@ public abstract class MinigamesBase : MonoBehaviour
         // Logs the win event with relevant details
         Debug.Log($"{titleText} {descriptionText} {currencyValue}");
 
-        // Adds a listener for the negative button (exit or cancel)
+        // Adds a listener for the negative button
         negativeButton?.onClick.AddListener(() =>
         {
             onNegative?.Invoke();  // Invoke the negative action callback if provided
@@ -40,13 +40,13 @@ public abstract class MinigamesBase : MonoBehaviour
             DifficultyManager.Instance.Toggle(true);  // Enable difficulty management or show some other UI elements
         });
 
-        // Adds a listener for the positive button (e.g., confirm or continue)
+        // Adds a listener for the positive button
         positiveButton?.onClick.AddListener(() =>
         {
             onPositive?.Invoke();  // Invoke the positive action callback if provided
             Toggle(false);  // Hide the base minigame object
             ToggleGameArea(false);  // Hide the game area
-            DifficultyManager.Instance.HideCloseButton();  // Hide the close button (perhaps after completing the minigame)
+            DifficultyManager.Instance.HideCloseButton();  // Hide the close button 
         });
     }
 
@@ -56,7 +56,7 @@ public abstract class MinigamesBase : MonoBehaviour
         // Logs the lose event with relevant details
         Debug.Log($"{titleText} {descriptionText}");
 
-        // Adds a listener for the negative button (exit or cancel)
+        // Adds a listener for the negative button
         negativeButton?.onClick.AddListener(() =>
         {
             onNegative?.Invoke();  // Invoke the negative action callback if provided
@@ -65,13 +65,13 @@ public abstract class MinigamesBase : MonoBehaviour
             DifficultyManager.Instance.Toggle(true);  // Enable difficulty management or show some other UI elements
         });
 
-        // Adds a listener for the positive button (e.g., retry or continue)
+        // Adds a listener for the positive button 
         positiveButton?.onClick.AddListener(() =>
         {
             onPositive?.Invoke();  // Invoke the positive action callback if provided
             Toggle(false);  // Hide the base minigame object
             ToggleGameArea(false);  // Hide the game area
-            DifficultyManager.Instance.HideCloseButton();  // Hide the close button (perhaps after completing the minigame)
+            DifficultyManager.Instance.HideCloseButton();  // Hide the close button 
         });
     }
 

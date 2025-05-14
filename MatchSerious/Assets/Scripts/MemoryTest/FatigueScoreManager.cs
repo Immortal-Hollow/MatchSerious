@@ -59,7 +59,7 @@ public class FatigueScoreManager : MonoBehaviour
         UpdateFatigueText();
     }
 
-    // Method to add a fatigue score from another script (e.g., after a game)
+    // Method to add a fatigue score from another script 
     public void AddFatigueScore(float fatigueScore)
     {
         totalFatigueScore += fatigueScore;
